@@ -1,6 +1,7 @@
 package com.example.flutter_sci_chart_plugin;
 
 import com.example.flutter_sci_chart_plugin.sci.CandleStickFactory;
+import com.example.flutter_sci_chart_plugin.sci.InteractingAnnotationFactory;
 import com.example.flutter_sci_chart_plugin.sci.OHLCFactory;
 import com.scichart.charting.visuals.SciChartSurface;
 
@@ -23,6 +24,11 @@ public class FlutterSciChartPlugin {
             .platformViewRegistry()
             .registerViewFactory(
                     "plugins.com.example/candlestick", new CandleStickFactory(registrar.messenger()));
+
+    registrar
+            .platformViewRegistry()
+            .registerViewFactory(
+                    "plugins.com.example/interacting_annotation", new InteractingAnnotationFactory(registrar.messenger()));
   }
 
   private static void setLicense() {

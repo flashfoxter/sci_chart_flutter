@@ -61,7 +61,7 @@ public class RealTimeOhlcChart {
     private AxisMarkerAnnotation ohlcAxisMarker;
 
     private IMarketDataService marketDataService;
-    private final MovingAverage sma50 = new MovingAverage(50);
+    private final MovingAverage sma50 = new MovingAverage(1000);
     private PriceBar lastPrice;
 
     private OverviewPrototype overviewPrototype;
@@ -331,6 +331,7 @@ public class RealTimeOhlcChart {
                     rightBox.setX2(overviewXAxisVisibleRange.getMax());
                 }
             });
+
         }
 
         IXyDataSeries<Date, Double> getOverviewDataSeries() {

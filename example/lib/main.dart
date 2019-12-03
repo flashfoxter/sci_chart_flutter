@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sci_chart_plugin_example/interacting_annotation_example.dart';
 
 import 'candlestick_example.dart';
 import 'ohlc_example.dart';
@@ -31,6 +32,17 @@ class ChartExample extends StatelessWidget {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context){
                       return CandleStickChartExample();
+                    }
+                ));
+              },
+            ),
+
+            ListTile(
+              title: Text('Interacting with Annotations'),
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context){
+                      return InteractingAnnotationChartExample();
                     }
                 ));
               },
